@@ -1,0 +1,123 @@
+@font-face {
+  font-family: 'singleDay';
+  src: url('../fonts/SingleDay-Regular.ttf') format('opentype');
+}
+.container {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background: url(../assets/HomePage/background/6.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.box {
+  width: 45vw;
+  height: 40vh;
+  background-color: black;
+  border-radius: 20px;
+}
+
+.box-top {
+  display: flex;
+  width: 100%;
+  height: 60%;
+  margin-top: 5%;
+}
+
+
+.box-img {
+  width: 25%;
+  height: 100%;
+  margin: 3% 2% 0% 5%;
+}
+.box-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.box-text {
+  width: 65%;
+  height: 100%;
+  color: white;
+  text-align: center;
+  font-family: 'singleDay', sans-serif !important;
+  font-size: 23px;
+}
+
+.box-months {
+  width: 100%;
+  height: 10%;
+  margin-top: 6.5%;
+  font-family: 'singleDay', sans-serif;
+}
+/* Styles for .month-btn */
+.box-months .month-btn {
+  font-family: 'singleDay', sans-serif;
+  background: none; /* No background */
+  border: none; /* No border */
+  color: white; /* Text color */
+  font-size: 25px; /* Font size */
+  cursor: pointer; /* Cursor changes to pointer on hover */
+  padding: 0px 10px; /* Padding around the text */
+  margin: 0; /* No margin */
+  flex: 1; /* Flex grow to distribute space equally */
+  transition: color 0.3s ease, transform 0.3s ease; /* Transition for hover effect */
+}
+
+/* Hover effect for .month-btn */
+.box-months .month-btn:hover {
+  color: #ffcc00; /* Change text color on hover */
+  transform: scale(1.2); /* Slightly scale up the button on hover */
+}
+
+/* Flex container for .box-months to align buttons in a row */
+.box-months {
+  display: flex;
+  justify-content: space-around; /* Distribute buttons equally */
+  align-items: center; /* Align buttons vertically */
+}
+
+@media (max-width: 1500px) {
+  .box {
+    width: 60%;
+  }
+  .box-months .month-btn {
+    font-size: 20px;
+  }
+}
+@media (max-width: 1000px) {
+  .box {
+    width: 70%;
+  }
+  .box-text {
+    font-size: 20px;
+  }
+}
+@media (max-width: 800px) {
+  .box {
+    width: 90%;
+  }
+  .box-img {
+    width: 35%;
+  }
+  .box-text {
+    width: 55%;
+  }
+  .box-months {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .box-months .month-btn {
+    flex: 0 0 auto;
+    margin: 5px;
+  }
+}

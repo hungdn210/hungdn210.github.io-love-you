@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@600&display=swap');
+.container {
+  width: 100%;
+}
+
+.gallery-rotating {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
+  height: 100vh;
+  width: 100%;
+  background: url(../assets/Gallery/Background/3.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.lazy-load {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.lazy-load[data-src] {
+  opacity: 1;
+}
+
+
+.intro {
+  height: 10%;
+  width: 100%;
+  text-align: center;
+  margin-top: 5%;
+}
+.intro p {
+  font-family: Pacifico;
+  font-size: 70px;
+  color: white;
+  line-height: 0px;
+}
+
+.box { 
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  transform: perspective(1000px) rotateY(0deg);
+  margin-top: 17%;
+}
+
+.box span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(450px);
+  -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
+}
+
+.box span img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+/*Gallery time*/
+.gallery-time {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px; /* Spacing between images */
+  padding: 20px;
+}
+.gallery-time h2 {
+  font-family: Pacifico;
+  font-size: 50px;
+  line-height: 0;
+}
+.gallery-month {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px; /* Spacing between images in each month */
+  margin-bottom: 20px;
+}
+
+.gallery-month img {
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 5px;
+}
+
+.gallery-month img:hover {
+  transform: scale(1.15);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.gallery-month h3 {
+  font-size: 30px;
+  width: 100%;
+  font-family: 'Dancing Script', sans-serif;
+  position: relative; /* Needed to position the pseudo-element */
+  display: flex; /* Aligns the line and text */
+  align-items: center; /* Centers the line with the text */
+  justify-content: center; /* Center the text */
+  margin-bottom: 20px;
+}
+
+.gallery-month h3::after {
+  content: '';
+  height: 2px; /* Thickness of the line */
+  background-color: #ccc; /* Color of the line */
+  width: 60%; /* Width of the line */
+  margin-left: 30px; /* Space between text and line */
+}
+
+
+
+@media (max-width: 800px) {
+  .intro {
+    margin-top: 15%;
+  }
+  .intro p {
+    font-size: 50px;
+  }
+  .box {
+    margin-top: 30%;
+    width: 150px;
+    height: 150px;
+  }
+  .box span {
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(250px);
+    -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
+  }
+  .gallery-time h2{
+    font-size: 32px;
+  }
+  .gallery-month img {
+    height: 150px;
+  }
+  .gallery-month h3 {
+    font-size: 20px; 
+  }
+}

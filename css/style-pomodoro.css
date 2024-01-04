@@ -1,0 +1,92 @@
+/* Global Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif; /* Choose your preferred font */
+}
+
+/* Container Styles */
+.container {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background: url(../assets/Pomodoro/3.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-transform:uppercase;
+}
+
+/* Pomodoro Timer Styles */
+.pomodoro {
+  max-width: 90%; /* Maximum width of the pomodoro container */
+  padding: 20px; /* Semi-transparent background */
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  margin-bottom: 4%;
+}
+.main-row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 60px;
+}
+.row {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 0;
+}
+
+.col-md-4, .col-md-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter {
+  width: 100%;
+}
+
+/* Clock Styles */
+.flip-clock-wrapper {
+  margin-top: 0px;
+}
+
+/* Button Styles */
+.btn {
+  background-color: rgba(0, 0, 0, 0.6); /* Adjust the button color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.btn:hover {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+#start, #stop, #clear {
+  margin-top: 15px;
+}
+
+/* Stats Row */
+#statRow {
+  cursor:default;
+  margin-top: 20px;
+}
+
+#stats {
+  background-color: #333;
+  color: #CCC;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+

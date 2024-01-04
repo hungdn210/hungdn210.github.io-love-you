@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;900&display=swap');
+
+@font-face {
+  font-family: 'Balonku';
+  src: url('../fonts/MotleyForcesRegular-w1rZ3.ttf') format('opentype');
+}
+
+*{
+  box-sizing: border-box;
+  outline: none; border:none;
+  text-decoration: none;
+  transition: all .2s linear;
+}
+
+body, html{
+  overflow-x: hidden;
+  margin:0; padding:0;
+}
+
+body {
+  -ms-overflow-style: none; /* For Internet Explorer, Edge */
+  scrollbar-width: none; /* For Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, Opera */
+}
+
+#nav-toggler{
+  -webkit-appearance: none;
+  position: absolute;
+  right: 0px;
+  margin: 30px 50px;
+  cursor: pointer;
+  z-index: 1010;
+  font-size: 2.5rem;
+  color: white;
+}
+
+#nav-toggler:checked{
+  transform: rotate(1turn);
+}
+
+#nav-toggler:checked::before{
+  content: '\f00d';
+  color:#fff;
+  transition: .2s linear .2s;
+}
+
+#nav-toggler:checked ~ .navbar{
+  left:0;
+}
+
+.navbar{
+  font-family: 'Balonku', 'Poppins', sans-serif;
+  position: fixed;
+  top:0; left:-110%;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-flow: column;
+  padding:0 10%;
+  text-transform: uppercase;
+}
+
+.navbar a{
+  font-size: 5em;
+  color:transparent;
+  -webkit-text-stroke: 1px rgb(252, 141, 247, 1);
+  font-weight: bolder;
+  position: relative;
+  letter-spacing: 3px;
+  margin: 25px 0;
+}
+
+.navbar a::before{
+  content: attr(data-text);
+  position: absolute;
+  top:0; left:0;
+  color:rgba(245, 223, 244, 1);
+  transition: .3s linear;
+  clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+
+.navbar a:hover::before{
+  clip-path: polygon(0 0, 100% 0, 99% 100%, 0 100%);
+}
+
+.background-image{
+  position: absolute;
+  top:0; left:0;
+  height: 100%;
+  width: 100%;
+  background: url(../assets/Header/1.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.navbar a:hover:nth-child(2) ~ .background-image{
+  background: url(../assets/Header/3.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.navbar a:hover:nth-child(3) ~ .background-image{
+  background: url(../assets/Header/4.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.navbar a:hover:nth-child(4) ~ .background-image{
+  background: url(../assets/Header/6.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.navbar a:hover:nth-child(5) ~ .background-image{
+  background: url(../assets/Header/6.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+@media (max-width:768px){
+  .navbar a{
+    font-size: 3em;
+  }
+}
+
+@media (max-width:450px){
+  .navbar a{
+    font-size: 2em;
+  }
+}
+

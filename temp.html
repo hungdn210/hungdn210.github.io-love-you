@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style-temp.css">
+  <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+</head>
+  <title>Document</title>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <div class="container">
+    <div class="switch">
+      <input type="checkbox" name="toggle">
+      <label for="toggle">
+        <i class="bulb">
+          <span class="bulb-center"></span>
+          <span class="filament-1"></span>
+          <span class="filament-2"></span>
+          <span class="reflections">
+            <span></span>
+          </span>
+          <span class="sparks">
+            <i class="spark1"></i>
+            <i class="spark2"></i>
+            <i class="spark3"></i>
+            <i class="spark4"></i>
+          </span>
+        </i>    
+      </label>
+    </div>
+    <div class="try-again">
+      <img src="assets/Anniversary/try-again-1.png" alt="" id="try-again-pic">
+    </div>
+    <span id="span-1">🌟 Amazing! You've unlocked a surprise, baby! 🌟</span>
+    <span id="span-2">🎁 A special gift, just for you... 🎁</span>
+    <button class="continueButton" onclick="runScene();">Continue</button>
+    <div class="canvasDiv">
+      <canvas id="testCanvas" width="550" height="500"></canvas>
+    </div>
+  </div>
+  <div class="scene-container">
+    <div class="scene">
+      <div class="wrap">
+          <div class="wall wall-right"></div>
+          <div class="wall wall-left"></div>   
+          <div class="wall wall-top"></div>
+          <div class="wall wall-bottom"></div> 
+          <div class="wall wall-back"></div>    
+      </div>
+      <div class="wrap">
+          <div class="wall wall-right"></div>
+          <div class="wall wall-left"></div>   
+          <div class="wall wall-top"></div>
+          <div class="wall wall-bottom"></div>   
+          <div class="wall wall-back"></div>    
+      </div>
+    </div>
+  </div>
+  <div class="notes-container">
+    <div class="waveWrapper waveAnimation">
+      <div class="waveWrapperInner bgTop">
+        <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
+      </div>
+      <div class="waveWrapperInner bgMiddle">
+        <div class="wave waveMiddle" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"></div>
+      </div>
+      <div class="waveWrapperInner bgBottom">
+        <div class="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
+      </div>
+    </div>
+    <div class="notes-text" onload="runNotes()">
+      <div class="output" id="output">
+        <h1 class="cursor"></h1>
+        <p></p>
+      </div>
+    </div>
+    <div class="heart">
+      <i class="fa-solid fa-heart"></i>
+    </div>
+  </div>
+  
+
+</body>
+  <script src="js/js-temp.js"></script>
+</html>
