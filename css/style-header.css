@@ -107,18 +107,24 @@ body::-webkit-scrollbar {
 }
 
 .navbar a:hover:nth-child(3) ~ .background-image{
-  background: url(../assets/Header/4.jpg) no-repeat;
+  background: url(../assets/Header/5.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .navbar a:hover:nth-child(4) ~ .background-image{
-  background: url(../assets/Header/6.jpg) no-repeat;
+  background: url(../assets/Header/4.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .navbar a:hover:nth-child(5) ~ .background-image{
+  background: url(../assets/Header/6.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.navbar a:hover:nth-child(6) ~ .background-image{
   background: url(../assets/Header/6.jpg) no-repeat;
   background-size: cover;
   background-position: center;
