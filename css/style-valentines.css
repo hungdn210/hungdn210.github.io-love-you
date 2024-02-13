@@ -16,3 +16,85 @@
   background-size: cover;
   background-position: center;
 }
+
+#valentine-gif {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 20%;
+  transform: translate(-50%, -50%);
+  border: 5px solid red;
+  border-radius: 10%;
+  z-index: 100;
+}
+
+#valentine-question {
+  position: absolute;
+  top: 70%; /* Adjust as necessary */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2em; /* Make the font bigger */
+  font-family: 'singleDay';
+  text-shadow: 2px 2px 4px #000000;
+  z-index: 101;
+  text-align: center;
+}
+
+#yes-button, #no-button {
+  position: absolute;
+  top: 80%;
+  width: 5%;
+  height: auto;
+  z-index: 101;
+  cursor: pointer;
+}
+
+#yes-button {
+  left: calc(50% - 10% - 10px); /* Center the button */
+}
+
+#no-button {
+  left: calc(50% + 5% + 10px); /* Center the button */
+}
+
+
+#valentines-plan {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  color: white;
+  font-size: 1.5em; /* Adjust size as needed */
+  font-family: 'singleDay';
+  text-align: center;
+  z-index: 101;
+  line-height: 1.5; /* Adjust line spacing as needed */
+  padding: 20px; /* Add some padding */
+  box-sizing: border-box; /* Make sure padding doesn't affect the width */
+  overflow-y: auto; /* Allow scrolling if the content overflows */
+}
+
+@media (max-width:800px){
+  #valentine-gif {
+    width: 80%;
+  }
+  #valentine-question {
+    width: 100%;
+    font-size: 40 px;
+  }
+  #yes-button, #no-button {
+    width: 30%;
+  }
+  #yes-button {
+    left: 10%;
+  }
+  #no-button {
+    left: 60%;
+  }
+  #valentines-plan {
+    font-size: 1em; /* Smaller font size for smaller screens */
+    padding: 20px 0; /* Less padding on smaller screens */
+  }
+}
